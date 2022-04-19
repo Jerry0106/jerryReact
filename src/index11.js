@@ -13,7 +13,15 @@ const Test9s = Array.from({ length: 10 }, (_, index) => index)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div
+      style={{
+        display: 'flex',
+      }}
+    >
+      {Test9s.map((item) => (
+        <App key={item + 1} />
+      ))}
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 )
