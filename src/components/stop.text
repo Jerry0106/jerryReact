@@ -1,0 +1,9 @@
+ const locationDate =
+    location.time && location.time.find(time => time.dataTime === nowDate);
+  const sunriseTimestamp = dayjs(
+    `${locationDate.dataTime} ${locationDate.sunrise}`,
+  ).unix();
+  const sunsetTimestamp = dayjs(
+    `${locationDate.dataTime} ${locationDate.sunset}`,
+  ).unix();
+  const nowTimeStamp = now.unix();
